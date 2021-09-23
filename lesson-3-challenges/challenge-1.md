@@ -5,11 +5,11 @@ Write a function `ageDifference` that returns the difference in age between the 
 It should take two parameters: `youngest`, and `oldest`. These will always be objects. Use the following two as your test cases:
 
 ```js
-var youngest = {
+const youngest = {
   name: 'Maya',
   age: 13
 };
-var oldest = {
+const oldest = {
   name: 'Joy',
   age: 83
 };
