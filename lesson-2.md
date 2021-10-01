@@ -9,9 +9,10 @@ In this tutorial we are going to look at:
 * what a command line is
 * how to use the command line to navigate the file system and run programs
 * what JavaScript is
-* numbers and strings
+* console.log()
+* data types
 * how to use variables
-* calling and defining methods
+* writing and invoking functions
 
 ### Goal
 
@@ -26,7 +27,7 @@ The command line is a text interface for your computer. Similar to Windows Explo
 ### How do I access the command line?
 
 On a Mac you can access the command line by opening the Terminal application
-from the Applications > Utilities folder (or use `cmd (⌘) + space` and search
+from the **Applications > Utilities** folder (or use `cmd (⌘) + space` and search
 for "Terminal").
 
 The command line can seem unfamiliar and scary, but it's really a different way of interacting with your computer. This tutorial only covers safe commands that will not do anything bad to your computer, even if you get them wrong.
@@ -47,6 +48,8 @@ Try typing, then pressing `Enter`:
 pwd
 ```
 
+----------------
+
 #### `pwd` or print working directory
 
 The `pwd` command prints to the command line the current directory (another name for folder) you are in. If you have just opened up your terminal, you are probably in your "home" directory, and should get an output similar to this:
@@ -56,6 +59,8 @@ The `pwd` command prints to the command line the current directory (another name
 ```
 
 So your current "working directory" is `/Users/your-username`.
+
+----------------
 
 #### Getting things wrong on the command line
 
@@ -71,6 +76,8 @@ You should see an error message like `-bash: whargleblargle: command not found`.
 
 If you want to cancel your current entry, you can either delete the command using the backspace button, or press `Ctrl + C` to get a brand new line.  Your mouse will not work for navigating around the command line commands - but you can use the arrow keys on your keyboard to move the cursor left and right.
 
+----------------
+
 #### `ls` or list
 
 You might wonder "how I do know which files are in a directory?", the `ls` command can do this:
@@ -80,8 +87,9 @@ ls
 ```
 
 This should print a list of the files and folders inside the working
-directory. You'll probably see directories like `Applications`, `Desktop`,
-`Documents` and `Downloads`.
+directory. You'll probably see directories like `Applications`, `Desktop`, `Documents` and `Downloads`.
+
+----------------
 
 ### `cd` or change directory
 
@@ -97,7 +105,7 @@ Lots of commands need parameters like this - for example, `cd` needs to know the
 
 In Lesson 1 we created a folder to keep our source code
 (`lesson-1-html-and-css`). Create a new folder for lesson 2 called
-`lesson-2-JavaScript` and change the working directory in your command line using
+`lesson-2-javascript` and change the working directory in your command line using
 `cd`.
 
 Confirm you're in the right place by running:
@@ -135,7 +143,9 @@ $ cd /Users/your-username/My Directory With Spaces/lesson-2-javascript
 ```
 
 ## Introduction to JavaScript
+JavaScript is a great language to learn. It is run on all modern web browsers and is used to change what is displayed on the web page in response to a user's activity.
 
+As the official language of the web, you can build websites and applications with JavaScript alongside HTML and CSS.
 
 ### Running JavaScript interactively with Repl.it
 As you write code, you'll want to be able to see what it does. For this, you need to "run it" somewhere. You can do this in a number of ways, but to keep things simple today, we are going to use a tool called [Repl.it](https://replit.com/).
@@ -149,7 +159,7 @@ As you write code, you'll want to be able to see what it does. For this, you nee
 You should now have your own coding playground to play with!
 
 <div style="border: 1px solid grey;">
-<img src="source/images/lesson-2/repl-complete.png" alt="Repl website, showing 'Hello World!' in the console">
+<img src="source/images/lesson-2/repl-complete.png" alt="Repl website, showing an empty console">
 </div>
 
 
@@ -174,112 +184,116 @@ Click "run" and check the console. You should see "Hello world!" printed out on 
 </div>
 
 You also might be wondering why there's a semicolon at the end of the code you wrote. Semicolons are used at the end of every statement in JavaScript. The code usually won't break if you forget it, but it's good practice to remember.
-### Numbers
 
-We can use JavaScript as a kind of calculator. Try typing `console.log(1 + 1)` into repl and click "run". Do you get the right answer?
+## Data Types
+If you played around with `console.log()` in the last step, you might have noticed that words always have to be inside quotes or else the code breaks, whereas numbers can work without quotes. Why is this? Well there are different data types in JavaScript. We're going to learn the three main data types right now (later we'll look at some other data types, like objects and arrays).
+
+### Strings
+
+In the real world strings tie things up. Programming strings have *nothing* to do with real-world strings.
+
+Programming strings are used to store collections of letters and numbers.
+That could be a single letter like `"a"`, a word like `"hi"`, or a sentence like
+`"Hello my friends."`.
+
+A JavaScript string is always written inside a pair of quotes (single or double). The shortest possible string is called the empty string: `""`. It’s not uncommon for a single string to contain paragraphs or even pages of text.
+
+If you type a string in your Repl using `console.log()` and run it, it will return it back at you:
+
+```
+console.log("hello");
+=> hello
+```
+
+### Integers
+Numbers are known as "integers" in JavaScript. they do not need to be wrapped in quotes like strings and can be written as is:
+`100`
+
+We can use JavaScript as a kind of calculator. Try typing `console.log(1 + 1)` into your Repl and click "run". Do you get the right answer?
 
 In JavaScript, the `+` operator adds numbers together. Other operators include:
 
 * `-` - subtract
 * `*` - multiply
 * `/` - divide
-* `**` - raise to the power of
 
 You can also use brackets (`()`) to group things, e.g. `(2 + 2) / 2` which would evaluate to 2, rather than `2 + 2 / 2` which would evaluate to 3.
 
 #### Task 2: Maths challenge
 
-Use Repl.it to work out the answer to "191 multiplied by 7".
+Use your Repl to work out the answer to "191 multiplied by 7".
 
 <details>
 <summary>Answer</summary>
 
 ```
-console.log(191 *7);
+console.log(191 * 7);
 => 1337
 ```
 
 </details>
 
-### Strings
+### Booleans
+A "boolean" value denotes if a statement is true or false. A boolean can only be `true` or `false` and is always written without quotes.
 
-In the real world strings tie things up. Programming strings have *nothing*
-to do with real-world strings.
+### `typeof`
+You've seen what they look like, now make sure they are what you think they are. There is a built-in feature in JavaScript which allows you to check the type of a particular value: `typeof`
 
-Programming strings are used to store collections of letters and numbers.
-That could be a single letter like `"a"`, a word like `"hi"`, or a sentence like
-`"Hello my friends."`.
+Write this code in your Repl and click 'run':
+```
+console.log(typeof "hello");
+```
+You should see `string` printed to the console. This is because 'hello' is a string data type.
 
-A JavaScript string is written as a quote (`"`) followed by some letters, numbers,
-or symbols and ended with a closing quote (`"`). The shortest possible string
-is called the empty string: `""`. It’s not uncommon for a single string to
-contain paragraphs or even pages of text.
+#### Task 3: Check the types
+Try to log the `typeof` three different values, `"hello"`, `102`, `false`. You should get a different output for each one.
 
-If you type a string into `irb` it will return it back at you:
+<details>
 
 ```
-irb(main):017:0> "Hello IRB"
-=> "Hello IRB"
+console.log(typeof "hello");
+console.log(typeof 22);
+console.log(typeof true);
+
+=> number
+=> string
+=> boolean
 ```
+</details>
 
-#### Getting things wrong in the code
-
-Just like in the command line, if you give JavaScript a command it does not understand it will show you an error message. Again, do not panic! Everything is fine.
-
- JavaScript will do its best to explain why it did not understand your code, but sometimes the error messages can be hard for a beginner to understand.
-
-For example:
-
-```
-console.log("Hello World!", hello);
-
-=> ReferenceError: hello is not defined
-    at /home/runner/TimeToCode/index.js:1:29
-    at Script.runInContext (vm.js:130:18)
-    at Object.<anonymous> (/run_dir/interp.js:209:20)
-    at Module._compile (internal/modules/cjs/loader.js:999:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
-    at Module.load (internal/modules/cjs/loader.js:863:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
-    at internal/main/run_main_module.js:17:47
-```
-
-Here, we are told that JavaScript does not know what to do with 'hello'.
-
-### Variables
+## Variables
 
 Programming is all about creating abstractions, and in order to create an
-abstraction we must be able to assign names to things. Variables are a way of
-creating a name for a piece of data.
+abstraction we must be able to assign names to things. Variables are a way of creating a name for a piece of data.
 
-Creating variables in JavaScript uses a single equals sign - `name` `=` `value`. Some examples:
+Creating variables in JavaScript by using the keyword `var`, this lets the applicaiton know that you're about to store a value. You will also need to give a name to your variable.
 
 ```JavaScript
-let name = "Fido"
-let ageHumanYears = 4
-let ageDogYears = ageHumanYears * 7
+var name = "Ralph";
+var ageHumanYears = 4;
+var ageDogYears = ageHumanYears * 7;
+
+console.log(ageDogYears);
 ```
 
-This would give three variables: `name` with a value of `"Fido"`, `ageHumanYears` with a value of `4` and `ageDogYears` with a value of `28`.
+This would give three variables: `name` with a value of `"Ralph"`, `ageHumanYears` with a value of `4` and `ageDogYears` with a value of `28`.
 
 Variable names in JavaScript have to start with a letter, and they can not contain spaces or "special" characters like `-`, `$`, `@` and `&`.
 
 As a style convention, JavaScript variables use capitalises the first letter of the next word to separate the bits of the name - this is called `camelCase` (as opposed to `snake_case` or `PascalCase` which are used elsewhere).
 
-#### Task 3: Set and use a variable
+#### Task 4: Set and use a variable
 
-Use Repl to set a variable called `answer` to the value of `7` multiplied by
-`6`. Multiply the `answer` variable by `10` in Repl to see what happens.
+Use your Repl to set a variable called `answer` to the value of `7` multiplied by `6`. Multiply the `answer` variable by `10` in Repl to see what happens.
 
 <details>
   <summary>Answer</summary>
 
 ```
-let answer = 7 * 6
-console.log(answer)
-console.log(answer * 10)
-console.log(answer)
+var answer = 7 * 6;
+console.log(answer);
+console.log(answer * 10);
+console.log(answer);
 
 => 42
 => 420
@@ -288,53 +302,108 @@ console.log(answer)
 
 </details>
 
-
-### String Interpolation
-
-We often need to build a string out of other strings and bits of JavaScript. In JavaScript we can do this with "template literals".
-
-Within the string we use the interpolation marker(`). Inside those
-backticks we can put any variables or JavaScript code which will be evaluated,
-converted to a string, and output in that spot of the outer string.
-
-```
-console.log(`hello ${name}`)
-=> hello Fido
-```
-
-
-#### Task 4: Use string interpolation
-
-Using string interpolation in Repl, create a string with the text:
-
-> "The answer to life, the universe and everything is ..."
-
-Where `...` is the value of the `answer` variable you set in Task 3.
-
-<details>
-<summary>Answer</summary>
-
-```
-let answer = 7 * 6
-console.log("The answer to life, the universe and everything is `${answer}`")
-
-=> "The answer to life, the universe and everything is 42"
-```
-
-</details>
-
-
-### Calling methods
+## Functions
 
 While programming, we often find ourselves doing the same thing over and over again. It would be nice if we could give a particular task a name, and run it by calling its name.
 
-In JavaScript we do this with *methods*, and there are lots of them already built into the language. One example is `Math.random()`, which generates a random number:
+In JavaScript we do this with *functions*. A function is a block of code designed to perform a particular task. A function is executed when it is "invoked".
+The syntax of a function looks like this:
+```
+function functionName (parameters) {
+  // code to be executed
+}
+```
+
+You can call a function whatever you want, just like a variable. You can also give a function different values every time you run it which are called "parameters".
+
+To make the function run, we invoke it like so:
+`functionName();`
+
+Let's write a function that adds two numbers together. We'll call it `sum`, we want to add two different numbers each time, so we'll need to define two parameters to represent this, `x` and `y`.
 
 ```
-console.log(Math.random())
-=> 0.46937366222850585
+function sum (x, y) {
+  // code to be executed
+}
+
+sum(2, 3);
 ```
 
+Notice, we have invoked the function underneath with the parameters `2` and `3`. Inside the function try to `console.log()` both `x` and `y` and see what happens. What happens when you try logging them on the outside of the function? They should be undefined, because we can only access those parameters from inside the function.
 
-#### Task 5: Decode a secret message
 
+Now, we want to add those numbers together, but we need to write more than just `x + y`. We also need to tell the function to return something. So we need a `return` statement. The `return` statement specifies the value to output to the console.
+
+```
+function sum (x, y) {
+  return x + y;
+}
+
+sum(2, 3);
+```
+Run this code and see what you get.
+
+#### Task 5: Maths
+Write a function called `multiply` that multiplies two numbers together. This function should take in two parameters and return the answer.
+
+<details>
+
+```
+function multiply (x, y) {
+  return x * y;
+}
+
+multiply(2, 8);
+```
+</details>
+
+### ES5 vs ES6
+One thing about programming languages is they are always evolving. JavaScript is no different, whenever new features are added to the language, there will be a new ES version of JavaScript.
+Up until now we have mostly been writing ES5. ES5 is good to know as it gives us a better understanding of the language, and you might come across books or code that use ES5 syntax.
+
+ES6 is a newer version of JavaScript and adds features to the existing ES5, it is also widely used in the industry.
+
+One new feature of ES6 is `arrow functions` which is a more concise way of creating functions.
+
+If we take the above function example and re-write it into ES6 using arrow functions we get:
+```
+const sum = (x, y) => x + y;
+
+sum(2, 3);
+```
+
+Let's break down what is happening here. First we name the function, `sum` and store it in the variable using the `const` keyword.
+The `const` keyword is a new feature of ES6, which is used to declare a variable that we want to remain constant ie: unchangeable.
+A second keyword, `let`, which is available in ES6, can also be used to declare a variable.
+The difference between `const` and `let` is that `let` variables can be updated, whereas `const` variables cannot be updated.
+You'll see `let` appear again later on in the workshop.
+
+Both `const` and `let` have replaced the ES5 keyword `var` and gives us more control over our code.
+
+By storing the function in a variable, we are able to invoke it with different parameters.
+
+Try putting `(x, y) => x + y` in your Repl. You should get an output that says `[Function]` - this means JavaScript recognises this as a function.
+
+Now add to your code so it looks like:
+
+```
+const sum = (x, y) => x + y;
+
+console.log(sum(1,2));
+```
+
+Did your function return the correct answer?
+
+Notice how we didn't need to use the `return` statement here.
+The ability to write a function inline is one advantage of arrow functions.
+Note, if your function has more than one expression, it is good practice to use the `{}` and `return` keyword.
+
+Below is the same function written with `{}` and `return` keyword:
+
+```
+const sum = (x, y) => {
+  return x + y;
+}
+
+console.log(sum(1,2));
+```
