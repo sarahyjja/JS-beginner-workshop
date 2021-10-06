@@ -14,13 +14,7 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial you will have built [an "Apply for a barking permit" webpage](https://apply-for-a-barking-permit.london.cloudapps.digital/):
-
-<div style="border: 1px solid grey;">
-<a href="https://apply-for-a-barking-permit.london.cloudapps.digital/">
-<img src="source/images/lesson-1/image5.png" alt="Apply for a Barking Permit website, showing an image, a paragraph of text, a link and a form">
-</a>
-</div>
+By the end of this tutorial you will have built ![a meow permit](source/images/lesson-1/image5.png)
 
 This webpage contains a heading, some body text, two forms and a button.
 
@@ -227,9 +221,9 @@ Add the following paragraph inside your `<body>` tag, after the `<h1>`:
 
 ```html
 <p>
-The ministry of dogs is trying a new pilot. Good dogs can apply for a
-barking permit so they can woof whenever they like. It’s not yet clear how
-this permit will be enforced.
+    The ministry of cats is trying a new pilot. Angry cats can apply for a
+    meowing permit so they can meow whenever they like. It’s not yet clear how
+    this permit will be enforced.
 </p>
 ```
 
@@ -244,8 +238,8 @@ The link tag is called `a` for "anchor".
 Add a link to the end of your paragraph:
 
 ```html
-<a href="https://en.wikipedia.org/wiki/Bark_(sound)">
-More information about barking
+<a href="https://en.wikipedia.org/wiki/Meow">
+More information about meowing
 </a>
 ```
 
@@ -259,10 +253,12 @@ Wrap your existing paragraph, link and heading in a div:
 
 ```html
 <div>
-  <h1>Apply for a Barking Permit</h1>
+  <h1>Apply for a meowing permit</h1>
   <p>
-    The ministry of dogs is trying a new pilot. Good dogs can apply for a barking permit so they can woof whenever and wherever they like. It’s not yet clear how this permit will be enforced.
-    <a href="https://en.wikipedia.org/wiki/Bark_(sound)">More information about barking</a>.
+    TThe ministry of cats is trying a new pilot. Angry cats can apply for a
+      meowing permit so they can meow whenever they like. It’s not yet clear how
+      this permit will be enforced.
+    <a href="https://en.wikipedia.org/wiki/Meow">More information about meowing</a>.
  </p>
 </div>
 ```
@@ -283,8 +279,8 @@ Next, download the images you'll need. Do this by right-clicking each of
 the following links, select 'Save Link As...', and save it to the images folder
 you just created:
 
-* [shiba-inu.jpg](https://apply-for-a-barking-permit.london.cloudapps.digital/images/shiba-inu.jpg)
-* [puppy-in-a-hat.jpg](https://apply-for-a-barking-permit.london.cloudapps.digital/images/puppy-in-a-hat.jpg)
+* [cat-meow.png](source/images/lesson-1/cat-meow.png)
+* [cat-smile.png](source/images/lesson-1/cat-smile.png)
 
 Images are primarily made up of three components:
 
@@ -304,7 +300,7 @@ After the main heading of the page, add the following:
 ```
 
 Here you can see we have told the `src` of the image to look in the images
-folder and display the image `shiba-inu.png`, then we have given it a
+folder and display the image `cat-meow.png`, then we have given it a
 description in the `alt` attribute.
 
 ## Forms
@@ -349,12 +345,12 @@ Let’s create a couple of inputs in the form to ask the user for the name and a
 ```html
 <form>
     <div>
-        <label for="dog-name">Dog name</label>
-        <input id="dog-name" name="dog-name">
+        <label for="cat-name">Cat name</label>
+        <input id="cat-name" name="cat-name">
     </div>
     <div>
-        <label for="dog-age">Dog age (human years)</label>
-        <input id="dog-age" name="dog-age">
+        <label for="cat-age">Cat age (human years)</label>
+        <input id="cat-age" name="cat-age">
     </div>
 </form>
 ```
@@ -460,13 +456,11 @@ Replace your style tag with a link tag like the following:
 ```html
 <head>
   <title>Apply for a Barking Permit</title>
-  <link rel="stylesheet" href="https://l2c.london.cloudapps.digital/govuk-frontend.css">
+  <link rel="stylesheet" href="source/css/lesson-1/style.css">
 </head>
 ```
 
-This includes the CSS from the GOV.UK Frontend project. We can use those to
-make our website look like GOV.UK. Nothing will change yet though - first we
-need to apply some classes.
+This includes the CSS file from the project. We need now to apply some classes.
 
 ## Applying styles with classes
 
@@ -492,70 +486,61 @@ CSS by using the class name prefixed with a dot. For example:
 }
 ```
 
-GOV.UK Frontend uses this pattern for all its styles (so they don’t get
-accidentally applied to the wrong elements).
+### Task 14: add classes to your HTML
 
-### Task 14: add GOV.UK classes to your HTML
-
-Try adding these classes to your HTML and reloading the page in your browser
+Try to add classes to your HTML with the parameters you like and reload the page in your browser
 to see what happens:
 
-* `class="govuk-heading-xl"` (to your main heading)
-* `class="govuk-body"` (to your paragraph)
-* `class="govuk-width-container"` (to your outermost div)
-* `class="govuk-form-group"` (to both of the divs outside your labels and inputs)
-* `class="govuk-label"` (to both of your labels)
-* `class="govuk-input"` (to both of your inputs)
-* `class="govuk-button"` (to your button)
+* `class="top-heading"` (to your main heading)
+* `class="body-text"` (to your paragraph)
+* `class="width-container"` (to your outermost div)
+* `class="form-global"` (to both of the divs outside your labels and inputs)
+* `class="label"` (to both of your labels)
+* `class="input"` (to both of your inputs)
+* `class="button"` (to your button)
 
 ## Summary
 
 Once you've done all the tasks, you should have some HTML that looks something like this:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-  <title>Apply for a Barking Permit</title>
-  <link rel="stylesheet" href="https://l2c.london.cloudapps.digital/govuk-frontend.css">
+    <meta charset="utf-8">
+    <title>Apply for a meowing permit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="govuk-width-container">
-    <h1 class="govuk-heading-xl">Apply for a Barking Permit</h1>
-    <img src="images/shiba-inu.jpg" alt="A happy shiba inu">
-    <p class="govuk-body">
-      The ministry of dogs is trying a new pilot.
-      Good dogs can apply for a barking permit so they can woof whenever they like.
-      It’s not yet clear how this permit will be enforced.
-      <a href="https://en.wikipedia.org/wiki/Bark_(sound)">More information about barking</a>
-    </p>
+<div>
+    <h1 class="mega-big-heading">Apply for a meowing permit</h1>
+    <img src="images/cat-meow.png" alt="An angry cat">
+    <p>The ministry of cats is trying a new pilot. Angry cats can apply for a
+        meowing permit so they can meow whenever they like. It’s not yet clear how
+        this permit will be enforced.</p>
+    <a href="https://en.wikipedia.org/wiki/Meow">More information about meowing</a>
     <form>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="dog-name">Dog name</label>
-        <input class="govuk-input" id="dog-name" name="dog-name">
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="dog-age">Dog age (human years)</label>
-        <input class="govuk-input" id="dog-age" name="dog-age">
-      </div>
-      <button class="govuk-button">Apply for a permit</button>
+        <div>
+            <label for="cat-name">Cat name</label>
+            <input id="cat-name" name="cat-name">
+        </div>
+        <div>
+            <label for="cat-age">Cat age (human years)</label>
+            <input id="cat-age" name="cat-age">
+        </div>
+        <button>Apply for a permit</button>
     </form>
-  </div>
+</div>
+
 </body>
 </html>
 ```
 
-And your website should look something like this:
-
-<div style="border: 1px solid grey;">
-<a href="https://apply-for-a-barking-permit.london.cloudapps.digital/">
-<img src="source/images/lesson-1/image5.png" alt="Apply for a Barking Permit website, showing an image, a paragraph of text, a link and a form">
-</a>
-</div>
+And your website should look something like this: 
 
 This webpage contains a heading, some body text, two forms and a button.
 
 If things don't look quite right, or if you've got any questions, ask a
-developer and they should be able to help you out.
+us and we should be able to help you out.
 
 ## Further reading
