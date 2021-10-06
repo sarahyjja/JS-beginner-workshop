@@ -32,19 +32,15 @@ CSS stands for Cascading Style Sheets
 
 ### What are HTML and CSS?
 
-HTML is the language used to build websites. All text and content that you
-see on the internet is built using HTML.
+HTML is the language used to build websites. All text and content that you see on the internet is built using HTML.
 
 CSS is used with HTML to style the page.
 
-Whenever you go to a website (e.g. www.gov.uk) your browser sends a request
-to a special computer called a "server". The server sends back HTML and CSS,
-which your browser turns into a webpage for you to look at.
+Whenever you go to a website (e.g. www.gov.uk) your browser sends a request to a special computer called a "server". The server sends back HTML and CSS, which your browser turns into a webpage for you to look at.
 
 ## HTML elements
 
-An element is an HTML building block. There are paragraphs, headings,
-links, lists, and many more.
+An element is an HTML building block. There are paragraphs, headings, links, lists, and many more.
 
 HTML elements are made up of an opening tag (sometimes including some attributes), content, and a closing tag.
 
@@ -57,15 +53,13 @@ See the [Mozilla HTML elements reference documentation](https://developer.mozill
 
 ### `doctype` and `HTML`
 
-The doctype is the first thing that must be defined in an HTML page. It tells
-the browser which version of HTML the page is using.
+The doctype is the first thing that must be defined in an HTML page. It tells the browser which version of HTML the page is using.
 
 ```html
 <!doctype html>
 ```
 
-These days you will only ever need to use `html`. There used to be lots of
-complicated doctypes in the olden days. See the [W3C documentation on doctypes and markup styles](https://www.w3.org/wiki/Doctypes_and_markup_styles) for more information.
+These days you will only ever need to use `html`. There used to be lots of complicated doctypes in the olden days. See the [W3C documentation on doctypes and markup styles](https://www.w3.org/wiki/Doctypes_and_markup_styles) for more information.
 
 The doctype is always followed by the `<html>` tag, which contains the contents of your page.
 
@@ -91,15 +85,17 @@ The `body` contains webpage content that is visible to the user.
 Let's start by defining the basic structure of your website.
 
 Open Atom and create a new folder for your work called `lesson-1-html-and-css`. Select **File > Add Project Folder...** and select the correct folder:
-
+![How to add a folder in Atom](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image2.png)
+![How to add a folder to Atom. Menu > File > Add Project Folder...](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image4.png)
+![How to create a new folder in the Add Project Folder dialog](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image6.png)
 <details>
 <summary>Screenshots showing how to add a folder in Atom</summary>
-<img alt="Screenshot showing how to add a folder to Atom. Menu &gt; File &gt; Add Project Folder..." src="source/images/lesson-1/image4.png">
-<img alt="Screenshot showing how to create a new folder in the Add Project Folder dialog" src="source/images/lesson-1/image6.png">
+<img alt="How to add a folder to Atom. Menu > File > Add Project Folder..." src="source/images/lesson-1/image4.png">
+<img alt="How to create a new folder in the Add Project Folder dialog" src="source/images/lesson-1/image6.png">
 </details>
 
 Then inside this folder create a new file called `index.html` by right-clicking the project folder, and selecting **New File**:
-
+![How to add a file in Atom](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image2.png)
 <details>
 <summary>Screenshot showing how to add a file in Atom</summary>
 <img alt="Screenshot showing how to add a file in Atom. Right-click the folder in the sidebar, then select 'New File'." src="source/images/lesson-1/image2.png">
@@ -107,16 +103,17 @@ Then inside this folder create a new file called `index.html` by right-clicking 
 
 ### Task 1: doctype, html, head and body
 
-Using what we just learnt, and with guidance from your coach, do the following:
+Using what we just learnt, and with guidance from us, do the following:
 
 * declare the doctype to be HTML
 * open and close a set of `<html></html>` tags
 * Within this, create the `head` and `body` tags
 
 Once you've done this, open `index.html` in your web browser:
+![How to open the HTML file in Google Chrome](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image3.png)
 
 <details>
-<summary>Screenshot showing how to open the HTML file in Google Chrome</summary>:
+<summary>Screenshot showing how to open the HTML file in Google Chrome:</summary>
 <img alt="Screenshot showing how to open the HTML file in Google Chrome" src="images/lesson-1/image3.png">
 </details>
 
@@ -132,7 +129,7 @@ You should see that the title of the tab in your browser has changed. If not, do
 <!doctype html>
 <html>
   <head>
-    <title>Apply for a Barking Permit</title>
+    <title>Apply for a meowing permit</title>
   </head>
   <body>
   </body>
@@ -208,7 +205,7 @@ Headings can skip a level when going back up to a more important heading level:
 
 #### Task 3: add a heading
 
-Add a `h1` heading tag, which includes the phrase `Apply for a Barking Permit`, inside the `body` tag of your page.
+Add a `h1` heading tag, which includes the phrase `Apply for a meowing permit`, inside the `body` tag of your page.
 
 ### Element: paragraph (`p`)
 
@@ -296,7 +293,7 @@ image, this involves telling the webpage where it is and what it is called.
 After the main heading of the page, add the following:
 
 ```html
-<img src="images/shiba-inu.jpg" alt="A happy shiba inu">
+<img src="images/cat-meow.jpg" alt="A grumpy cat.">
 ```
 
 Here you can see we have told the `src` of the image to look in the images
@@ -431,7 +428,7 @@ Jazz up your site with some CSS. Inside the `<head>` element add a new
 
 ```html
 <head>
-  <title>Apply for a Barking Permit</title>
+  <title>Apply for a meowing permit</title>
   <style>
   body {
     background: hotpink;
@@ -455,7 +452,7 @@ Replace your style tag with a link tag like the following:
 
 ```html
 <head>
-  <title>Apply for a Barking Permit</title>
+  <title>Apply for a meowing permit</title>
   <link rel="stylesheet" href="source/css/lesson-1/style.css">
 </head>
 ```
@@ -491,13 +488,19 @@ CSS by using the class name prefixed with a dot. For example:
 Try to add classes to your HTML with the parameters you like and reload the page in your browser
 to see what happens:
 
-* `class="top-heading"` (to your main heading)
-* `class="body-text"` (to your paragraph)
 * `class="width-container"` (to your outermost div)
+* `class="top-heading"` (to your main heading)
+* `class="img"` (to your image)
+* `class="body-text"` (to your paragraph)
+* `class="link"` (to your a tag link)
 * `class="form-global"` (to both of the divs outside your labels and inputs)
-* `class="label"` (to both of your labels)
-* `class="input"` (to both of your inputs)
-* `class="button"` (to your button)
+* `class="label-input"` (to both of your labels block)
+* `class="label-text"` (to both of your labels text)
+* `class="input-text"` (to both of your inputs)
+* `class="button-validation"` (to your button)
+
+**Bonus :**
+* `class="button-validation:hover"` (to your button when hover)
 
 ## Summary
 
@@ -512,23 +515,23 @@ Once you've done all the tasks, you should have some HTML that looks something l
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
-    <h1 class="mega-big-heading">Apply for a meowing permit</h1>
-    <img src="images/cat-meow.png" alt="An angry cat">
-    <p>The ministry of cats is trying a new pilot. Angry cats can apply for a
+<div class="width-container">
+    <h1 class="top-heading">Apply for a meowing permit</h1>
+    <img class="img" src="images/cat-meow.png" alt="An angry cat">
+    <p class="body-text">The ministry of cats is trying a new pilot. Angry cats can apply for a
         meowing permit so they can meow whenever they like. It’s not yet clear how
         this permit will be enforced.</p>
-    <a href="https://en.wikipedia.org/wiki/Meow">More information about meowing</a>
-    <form>
-        <div>
-            <label for="cat-name">Cat name</label>
-            <input id="cat-name" name="cat-name">
+    <a class="link" href="https://en.wikipedia.org/wiki/Meow">More information about meowing</a>
+    <form class="form-global">
+        <div class="label-input">
+            <label class="label-text" for="cat-name">Cat name</label>
+            <input class="input-text" id="cat-name" name="cat-name" placeholder="Cat name...">
         </div>
-        <div>
-            <label for="cat-age">Cat age (human years)</label>
-            <input id="cat-age" name="cat-age">
+        <div class="label-input">
+            <label class="label-text" for="cat-age">Cat age (human years)</label>
+            <input class="input-text" id="cat-age" name="cat-age" placeholder="Cat age...">
         </div>
-        <button>Apply for a permit</button>
+        <button class="button-validation">Apply for a permit</button>
     </form>
 </div>
 
@@ -536,11 +539,91 @@ Once you've done all the tasks, you should have some HTML that looks something l
 </html>
 ```
 
-And your website should look something like this: 
+And your CSS should look like something like that:
+```css
+.width-container {
+max-width: 100%;
+}
 
+.top-heading {
+font-family: sans-serif;
+font-size: 3em;
+color: #383e42;
+text-align: center;
+}
+
+.body-text {
+font-size: 1.5em;
+font-family: sans-serif;
+color: #383E42;
+margin: 1em 6em 1em 6em;
+text-align: center;
+}
+
+.img {
+  max-width: 100%;
+  border-radius: 1em;
+  border-color: #383e42;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.form-global {
+  margin: 0 2em 0 2em;
+}
+
+.label-input{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.label-text {
+font-family: sans-serif;
+font-size: 1.3em;
+color: #383e42;
+}
+
+.input-text {
+  width: 100%;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.button-validation {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  padding: 14px 20px;
+  margin: 2em 0 2em 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-validation:hover {
+  background-color: #450049;
+}
+
+```
+
+And your website should look something like:
+![Webpage](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image5.png)
 This webpage contains a heading, some body text, two forms and a button.
 
 If things don't look quite right, or if you've got any questions, ask a
 us and we should be able to help you out.
-
-## Further reading
