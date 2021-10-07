@@ -14,7 +14,7 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial you will have built ![a meow permit](source/images/lesson-1/image5.png)
+By the end of this tutorial you will have built: ![a meow permit](source/images/lesson-1/image5.png)
 
 This webpage contains a heading, some body text, two forms and a button.
 
@@ -85,7 +85,6 @@ The `body` contains webpage content that is visible to the user.
 Let's start by defining the basic structure of your website.
 
 Open Atom and create a new folder for your work called `lesson-1-html-and-css`. Select **File > Add Project Folder...** and select the correct folder:
-![How to add a folder in Atom](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image2.png)
 ![How to add a folder to Atom. Menu > File > Add Project Folder...](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image4.png)
 ![How to create a new folder in the Add Project Folder dialog](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image6.png)
 <details>
@@ -472,7 +471,7 @@ CSS by using the class name prefixed with a dot. For example:
 ### HTML
 
 ```html
-<h1 class="mega-big-heading">Apply for a Barking Permit</h1>
+<h1 class="top-heading">Apply for a meowing permit</h1>
 ```
 
 ### CSS
@@ -500,7 +499,7 @@ to see what happens:
 * `class="button-validation"` (to your button)
 
 **Bonus :**
-* `class="button-validation:hover"` (to your button when hover)
+* `class="button-validation:hover"` (to your button when hover to change the state)
 
 ## Summary
 
