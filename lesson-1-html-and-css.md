@@ -20,7 +20,7 @@ This webpage contains a heading, some body text, two forms and a button.
 
 Even though HTML and CSS are not programming languages they’re important fundamentals, and they’ll help you understand how the internet works.
 
-We’ll cover programming languages (like Javascript and Ruby) in future lessons.
+We’ll cover programming languages (like Javascript) in future lessons.
 
 ## Introduction to HTML and CSS
 
@@ -85,8 +85,6 @@ The `body` contains webpage content that is visible to the user.
 Let's start by defining the basic structure of your website.
 
 Open Atom and create a new folder for your work called `lesson-1-html-and-css`. Select **File > Add Project Folder...** and select the correct folder:
-![How to add a folder to Atom. Menu > File > Add Project Folder...](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image4.png)
-![How to create a new folder in the Add Project Folder dialog](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image6.png)
 <details>
 <summary>Screenshots showing how to add a folder in Atom</summary>
 <img alt="How to add a folder to Atom. Menu > File > Add Project Folder..." src="source/images/lesson-1/image4.png">
@@ -94,7 +92,6 @@ Open Atom and create a new folder for your work called `lesson-1-html-and-css`. 
 </details>
 
 Then inside this folder create a new file called `index.html` by right-clicking the project folder, and selecting **New File**:
-![How to add a file in Atom](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image2.png)
 <details>
 <summary>Screenshot showing how to add a file in Atom</summary>
 <img alt="Screenshot showing how to add a file in Atom. Right-click the folder in the sidebar, then select 'New File'." src="source/images/lesson-1/image2.png">
@@ -108,8 +105,7 @@ Using what we just learnt, and with guidance from us, do the following:
 * open and close a set of `<html></html>` tags
 * Within this, create the `head` and `body` tags
 
-Once you've done this, open `index.html` in your web browser:
-![How to open the HTML file in Google Chrome](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image3.png)
+Once you've done this, open `index.html` in your web browser
 
 <details>
 <summary>Screenshot showing how to open the HTML file in Google Chrome:</summary>
@@ -120,7 +116,7 @@ Do you see anything on the page?
 
 ### Task 2: set the page title
 
-Now inside your head tag create a `<title>` tag with `Apply for a Barking Permit` as your title.
+Now inside your head tag create a `<title>` tag with `Apply for a meowing permit` as your title.
 
 You should see that the title of the tab in your browser has changed. If not, double check your code.
 
@@ -477,7 +473,7 @@ CSS by using the class name prefixed with a dot. For example:
 ### CSS
 
 ```css
-.mega-big-heading {
+.top-heading {
   font-size: 100px;
 }
 ```
@@ -621,7 +617,9 @@ color: #383e42;
 ```
 
 And your website should look something like:
-![Webpage](/Users/sarahkharraz/Desktop/repo/beginners-js-workshop/source/images/lesson-1/image5.png)
+
+<img alt="Completed website" src="source/images/lesson-1/image5.png">
+
 This webpage contains a heading, some body text, two forms and a button.
 
 If things don't look quite right, or if you've got any questions, ask a
