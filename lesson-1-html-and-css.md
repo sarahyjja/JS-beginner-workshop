@@ -20,7 +20,7 @@ This webpage contains a heading, some body text, two forms and a button.
 
 Even though HTML and CSS are not programming languages they’re important fundamentals, and they’ll help you understand how the internet works.
 
-We’ll cover programming languages (like Javascript and Ruby) in future lessons.
+We’ll cover programming languages (like Javascript) in future lessons.
 
 ## Introduction to HTML and CSS
 
