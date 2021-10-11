@@ -109,7 +109,7 @@ Once you've done this, open `index.html` in your web browser
 
 <details>
 <summary>Screenshot showing how to open the HTML file in Google Chrome:</summary>
-<img alt="Screenshot showing how to open the HTML file in Google Chrome" src="images/lesson-1/image3.png">
+<img alt="Screenshot showing how to open the HTML file in Google Chrome" src="source/images/lesson-1/image3.png">
 </details>
 
 Do you see anything on the page?
@@ -378,7 +378,7 @@ It defines the visual representation of the content. For example colour, margins
 
 ### What can I do with CSS?
 
-You can change the color, position, dimensions and presentation of different elements.
+You can change the colour, position, dimensions and presentation of different elements.
 
 ### Anatomy of a CSS rule
 
@@ -529,7 +529,6 @@ Once you've done all the tasks, you should have some HTML that looks something l
         <button class="button-validation">Apply for a permit</button>
     </form>
 </div>
-
 </body>
 </html>
 ```
@@ -622,5 +621,5 @@ And your website should look something like:
 
 This webpage contains a heading, some body text, two forms and a button.
 
-If things don't look quite right, or if you've got any questions, ask a
+If things don't look quite right, or if you've got any questions, ask
 us and we should be able to help you out.
