@@ -1,19 +1,12 @@
 # Solution
-### Challenge 1: Age Difference
+
+### Challenge 1: Fix the Code
 
 ```js
-const youngest = {
-    name: 'Maya',
-    age: 13
-};
-const oldest = {
-    name: 'Joy',
-    age: 83
-};
-
-const ageDifference = (youngestAge, oldestAge) => {
-    return oldest.age - youngest.age
+var firstNumber = 13;
+var secondNumber = 27;
+var add = (x, y) => {
+  return x + y;
 }
-
-ageDifference(youngest, oldest)
+add(firstNumber, secondNumber);
 ```

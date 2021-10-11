@@ -1,14 +1,52 @@
-# Challenge 3: Fix the Code
+# Challenge 3: Famous Writers
 
-The following code invokes a function called 'add' that adds two numbers together. When you run this code, it should add 13 to 27, and output '40' to the console.
-
-But this code is broken! Using your newfound JavaScript knowledge, find the bugs and fix it.
+Did you know you can also have an array of objects? We've created one for you here. Loop through the array, and for each object, `console.log()` the following sentence:
 
 ```js
-var first number = 13;
-var second number = 27;
-function 'add' () {
-  return x + y;
-}
-add(first number, second number);
+"Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 ```
+
+Ignore the brackets. They're just there to let you know a word should be replaced with something else. The sentence you log should look like this:
+
+```js
+"Hi, my name is Virginia Woolf. I am 59 years old, and work as a writer."
+```
+
+Here is the array:
+
+```js
+var writers = [
+  {
+    firstName: "Virginia",
+    lastName: "Woolf",
+    occupation: "writer",
+    age: 59,
+    alive: false
+  },
+  {
+    firstName: "Zadie",
+    lastName: "Smith",
+    occupation: "writer",
+    age: 41,
+    alive: true
+  },
+  {
+    firstName: "Jane",
+    lastName: "Austen",
+    occupation: "writer",
+    age: 41,
+    alive: false
+  },
+  {
+    firstName: "bell",
+    lastName: "hooks",
+    occupation: "writer",
+    age: 64,
+    alive: true
+  },
+];
+```
+
+**BONUS**
+
+If you want an extra challenge, only `console.log()` the writers that are alive.

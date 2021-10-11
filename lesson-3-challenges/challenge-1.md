@@ -1,22 +1,14 @@
-# Challenge 1: Age Difference
+# Challenge 1: Fix the Code
 
-Write a function `ageDifference` that returns the difference in age between the oldest and youngest member of a family.
+The following code invokes a function called 'add' that adds two numbers together. When you run this code, it should add 13 to 27, and output '40' to the console.
 
-It should take two parameters: `youngest`, and `oldest`. These will always be objects. Use the following two as your test cases:
-
-```js
-const youngest = {
-  name: 'Maya',
-  age: 13
-};
-const oldest = {
-  name: 'Joy',
-  age: 83
-};
-```
-
-Successfully calling the function will look like this:
+But this code is broken! Using your newfound JavaScript knowledge, find the bugs and fix it.
 
 ```js
-ageDifference(youngest, oldest); // ---> returns 70
+var first number = 13;
+var second number = 27;
+function 'add' () {
+  return x + y;
+}
+add(first number, second number);
 ```
