@@ -2,16 +2,16 @@
 ### Challenge 2: Age Difference
 
 ```js
-const youngest = {
+var youngest = {
     name: 'Maya',
     age: 13
 };
-const oldest = {
+var oldest = {
     name: 'Joy',
     age: 83
 };
 
-const ageDifference = (youngestAge, oldestAge) => {
+var ageDifference = (youngestAge, oldestAge) => {
     return oldest.age - youngest.age
 }
 

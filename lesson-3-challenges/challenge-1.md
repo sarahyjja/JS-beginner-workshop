@@ -7,7 +7,7 @@ But this code is broken! Using your newfound JavaScript knowledge, find the bugs
 ```js
 var first number = 13;
 var second number = 27;
-function 'add' () {
+var 'add' () {
   return x + y;
 }
 add(first number, second number);
