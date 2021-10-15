@@ -1,21 +1,28 @@
 # Solution
 
-### Challenge 4: FizzBuzz
+### Challenge 3: Famous Writers
 
-Long solution
+Short solution with `forEach`
 ```js
-var fizzBuzz = n => {
-    for(var num = 1; num <= n; num++){
-        if(num % 15 === 0){ console.log('FizzBuzz')}
-        else if(num % 3 === 0){ console.log('Fizz')}
-        else if(num % 5 === 0){ console.log('Buzz')}
-        else { console.log(num)}
-    }
+var whoAmI = writers.forEach(person =>
+    console.log(`Hi, my name is ${person.firstName} ${person.lastName}. I am ${person.age} years old, and work as a ${person.occupation}.`))
 }
-console.log(fizzBuzz(15))
 ```
 
-Short solution
+Long solution with a `for loop`
 ```js
-for(var num = 0; num < 16;) console.log((++num % 3 ? '' : 'fizz') + (num % 5 ? '' : 'buzz') || num)
+for (var person = 0; person < writers.length; person++) {
+    var firstName = writers[person].firstName
+    var lastName = writers[person].lastName
+    var age = writers[person].age
+    var occupation = writers[person].occupation
+
+    console.log(`Hi, my name is ${firstName} ${lastName}. I am ${age} years old, and work as a ${occupation}.`);
+}
+```
+
+BONUS solution
+```js
+var aliveWriters = writers.forEach(person =>
+    person.alive ? console.log(`I am ${person.firstName} and I am alive!`) : false)
 ```

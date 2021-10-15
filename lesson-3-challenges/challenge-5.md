@@ -1,20 +1,23 @@
-# Challenge 5: Needle in a Haystack
+# Challenge 4: FizzBuzz
 
-Can you find the needle in the haystack?
+Write a for loop that prints the numbers from 1 to 100. But for multiples of 3 print “Fizz” instead of the number and for the multiples of 5 print “Buzz”. For numbers which are multiples of both 3 and 5 print “FizzBuzz”.
 
-Write a function `findNeedle()` that takes an array full of junk, but containing one "needle", which you need to find with a for loop.
-
-After your function finds the needle it should return a message (as a string) that says: `"Found the needle at position x"`, with `x` being the index number at which you find the needle.
-
-So:
+Counting to 15 should look like this:
 
 ```js
-var haystack = ['hay', 'rabbit', 'needle', 'hat'];
-findNeedle(haystack);
-```
-
-Should return:
-
-```js
-'Found the needle at position 2'
+1
+2
+'Fizz'
+4
+'Buzz'
+'Fizz'
+7
+8
+'Fizz'
+'Buzz'
+11
+'Fizz'
+13
+14
+'FizzBuzz'
 ```
