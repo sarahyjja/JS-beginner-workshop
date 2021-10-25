@@ -2,18 +2,6 @@
 
 ### Challenge 1: ES5 to ES6
 
-#### Exercise 1
-```js
-const w = 'Nat'
-let x = 'John';
-let y = 'Marie';
-let z = y;
-y = x;
-x = z;
-console.log(`Here is ${z}, ${y} and ${w}`)
-```
----
-#### Exercise 2
 **Long version**
 ```js
 const greetings = (name) => {
@@ -30,4 +18,16 @@ const greetings = name => {
 **Short version**
 ```js
 const greetings = name => `Hello my name is ${name} !`;
+```
+---
+
+**BONUS solution**
+```js
+const w = 'Nat'
+let x = 'John';
+let y = 'Marie';
+let z = y;
+y = x;
+x = z;
+console.log(`Here is ${z}, ${y} and ${w}`)
 ```
