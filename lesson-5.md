@@ -47,7 +47,7 @@ if (happy === true) {
 }
 ```
 
-Now run this code (not forgetting to put the variable at the top of the Repl), and see what happens! Try changing the value of your variable from `true` to `false`.
+Now run this code (remember to put the variable at the top of the Repl), and see what happens! Try changing the value of your variable from `true` to `false`.
 
 ---
 
