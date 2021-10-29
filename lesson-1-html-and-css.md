@@ -24,13 +24,14 @@ We’ll cover programming languages (like Javascript) in future lessons.
 
 ## Introduction to HTML and CSS
 
-### What do HTML and CSS stand for?
+#### What do HTML and CSS stand for?
 
 HTML stands for Hyper Text Markup Language
 
 CSS stands for Cascading Style Sheets
 
-### What are HTML and CSS?
+
+#### What are HTML and CSS?
 
 HTML is the language used to build websites. All text and content that you see on the internet is built using HTML.
 
@@ -49,9 +50,10 @@ HTML elements are made up of an opening tag (sometimes including some attributes
 
 See the [Mozilla HTML elements reference documentation](https://developer.mozilla.org/en/docs/Web/HTML/Element) for more information.
 
-## Webpage structure
 
-### `doctype` and `HTML`
+### Webpage structure
+
+#### `doctype` and `HTML`
 
 The doctype is the first thing that must be defined in an HTML page. It tells the browser which version of HTML the page is using.
 
@@ -68,8 +70,8 @@ The doctype is always followed by the `<html>` tag, which contains the contents 
 <html>
 </html>
 ```
-
-### `head` and `body` tags
+---
+#### `head` and `body` tags
 
 A HTML page is split into two parts. The `head` and the `body`.
 
@@ -97,7 +99,8 @@ Then inside this folder create a new file called `index.html` by right-clicking 
 <img alt="Screenshot showing how to add a file in Atom. Right-click the folder in the sidebar, then select 'New File'." src="source/images/lesson-1/image2.png">
 </details>
 
-### Task 1: doctype, html, head and body
+---
+#### Task 1: Doctype, html, head and body
 
 Using what we just learnt, and with guidance from us, do the following:
 
@@ -114,7 +117,8 @@ Once you've done this, open `index.html` in your web browser
 
 Do you see anything on the page?
 
-### Task 2: set the page title
+---
+#### Task 2: Set the page title
 
 Now inside your head tag create a `<title>` tag with `Apply for a meowing permit` as your title.
 
@@ -148,7 +152,7 @@ and they’ll end up getting displayed with all the space squished, like so:
 ```
 You can write text like this
 ```
-
+---
 ### Element: heading (`h1`)
 
 Headings come in 6 levels:
@@ -197,17 +201,18 @@ Headings can skip a level when going back up to a more important heading level:
 <h2>Another heading 2</h2><!-- This h2 following a h4 is okay -->
 <h3>Another heading 3</h3>
 ```
-
-#### Task 3: add a heading
+---
+#### Task 3: Add a heading
 
 Add a `h1` heading tag, which includes the phrase `Apply for a meowing permit`, inside the `body` tag of your page.
 
+---
 ### Element: paragraph (`p`)
 
 Putting content into a `<p>` tag will break your text up into paragraphs.
 This helps make the content of your page easier to read for the user.
-
-#### Task 4: add a paragraph
+---
+#### Task 4: Add a paragraph
 
 Add the following paragraph inside your `<body>` tag, after the `<h1>`:
 
@@ -218,14 +223,15 @@ Add the following paragraph inside your `<body>` tag, after the `<h1>`:
     this permit will be enforced.
 </p>
 ```
-
+---
 ### Element: link (`a`)
 
 A link lets the user go to another webpage. We use the attribute `href` to indicate where you want the user to go.
 
 The link tag is called `a` for "anchor".
 
-#### Task 5: add a link
+---
+#### Task 5: Add a link
 
 Add a link to the end of your paragraph:
 
@@ -234,12 +240,13 @@ Add a link to the end of your paragraph:
 More information about meowing
 </a>
 ```
-
+---
 ### Element: div (`div`)
 
 A div tag lets you group elements together. Grouping elements is useful as we can later style them together (e.g. giving them all the same colour).
 
-#### Task 6: add a div
+---
+#### Task 6: Add a div
 
 Wrap your existing paragraph, link and heading in a div:
 
@@ -257,6 +264,7 @@ Wrap your existing paragraph, link and heading in a div:
 
 It's called "div" for "division".
 
+---
 ### Element: image (`img`)
 
 So far we've learned a lot about how to add text to our page. Now let’s add some images!
@@ -283,7 +291,8 @@ Images are primarily made up of three components:
 In order for us to see this image on the webpage we need to link to the
 image, this involves telling the webpage where it is and what it is called.
 
-#### Task 7: add an image
+---
+#### Task 7: Add an image
 
 After the main heading of the page, add the following:
 
@@ -295,17 +304,16 @@ Here you can see we have told the `src` of the image to look in the images
 folder and display the image `cat-meow.png`, then we have given it a
 description in the `alt` attribute.
 
-## Forms
+---
+### Element: Form (`form`)
 
 Forms let you ask your user for input. There are a number of interactive
 components (like text boxes and buttons) you can use in forms.
-
-### Element: form (`form`)
-
 The `<form>` element groups a set of components together so all of the inputs
 can be submitted at once.
 
-#### Task 8: create an empty form
+---
+#### Task 8: Create an empty form
 
 Create an empty form at the end your `<div>`:
 
@@ -317,8 +325,8 @@ Create an empty form at the end your `<div>`:
 </body>
 ```
 
-
-### Elements: label (`label`) and input (`input`)
+---
+### Elements: Label (`label`) and input (`input`)
 
 Labels and Inputs work together to tell the user what information they need to provide and to let them enter it.
 
@@ -330,7 +338,8 @@ submitted. Most of the time the `id` and `name` attributes have the same value.
 
 It's common to wrap a label / input pair in a `<div>` so they’re grouped together nicely.
 
-#### Task 9: add labels and inputs
+---
+#### Task 9: Add labels and inputs
 
 Let’s create a couple of inputs in the form to ask the user for the name and age of their dog:
 
@@ -347,20 +356,22 @@ Let’s create a couple of inputs in the form to ask the user for the name and a
 </form>
 ```
 
-### Element: button (`button`)
+---
+### Element: Button (`button`)
 
 The final thing our form needs is a way for the user to submit their answers.
 In HTML we use the `<button>` tag for creating buttons.
 
-#### Task 10: add a button
+---
+#### Task 10: Add a button
 
 Add a `<button>` just before the end of your `form`:
 
 ```html
 <button>Apply for a permit</button>
 ```
-
-#### Task 11: what happens when the user submits the form?
+---
+#### Task 11: What happens when the user submits the form?
 
 If you select the button it looks like the page just refreshes, but nothing
 changes. What's going on?
@@ -370,17 +381,18 @@ appearing in the URL - this is the simplest way of submitting data. In a
 later session we'll cover how to handle this information "on the server" so
 you can show the user a nice confirmation page.
 
+---
 ## Styling with CSS
 
 CSS is the language used to style websites.
 
 It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
 
-### What can I do with CSS?
+#### What can I do with CSS?
 
 You can change the colour, position, dimensions and presentation of different elements.
 
-### Anatomy of a CSS rule
+#### Anatomy of a CSS rule
 
 Here's an example CSS rule:
 
@@ -412,11 +424,13 @@ There are two ways you can use CSS to style your page:
 * using the style tag to write your CSS "inline", that is directly in your HTML file
 * using the link tag to load your CSS from an external file
 
-### Element: style
+---
+### Element: Style
 
 A `<style>` tag lets you write CSS directly inside your HTML.
 
-#### Task 12: add some inline CSS
+---
+#### Task 12: Add some inline CSS
 
 Jazz up your site with some CSS. Inside the `<head>` element add a new
 `<style>` element like the following:
@@ -436,12 +450,14 @@ Jazz up your site with some CSS. Inside the `<head>` element add a new
 
 Too much? Play around with the values until you find something you like.
 
-### Element: link
+---
+### Element: Link
 
 The `<link>` tag lets you load CSS from another file. This is easier to
 maintain and can be reused across several pages.
 
-#### Task 13: replace inline CSS with external CSS
+---
+#### Task 13: Replace inline CSS with external CSS
 
 Replace your style tag with a link tag like the following:
 
@@ -454,6 +470,7 @@ Replace your style tag with a link tag like the following:
 
 This includes the CSS file from the project. We need now to apply some classes.
 
+---
 ## Applying styles with classes
 
 Often you don’t want to apply a style to *every* element, but just to certain
@@ -478,7 +495,8 @@ CSS by using the class name prefixed with a dot. For example:
 }
 ```
 
-### Task 14: add classes to your HTML
+---
+#### Task 14: Add classes to your HTML
 
 Try to add classes to your HTML with the parameters you like and reload the page in your browser
 to see what happens:
@@ -497,6 +515,7 @@ to see what happens:
 **Bonus :**
 * `class="button-validation:hover"` (to your button when hover to change the state)
 
+---
 ## Summary
 
 Once you've done all the tasks, you should have some HTML that looks something like this:
@@ -507,12 +526,12 @@ Once you've done all the tasks, you should have some HTML that looks something l
 <head>
     <meta charset="utf-8">
     <title>Apply for a meowing permit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="source/css/lesson-1/style.css">
 </head>
 <body>
 <div class="width-container">
     <h1 class="top-heading">Apply for a meowing permit</h1>
-    <img class="img" src="images/cat-meow.png" alt="An angry cat">
+    <img class="img" src="source/images/lesson-1/cat-meow.png" alt="An angry cat">
     <p class="body-text">The ministry of cats is trying a new pilot. Angry cats can apply for a
         meowing permit so they can meow whenever they like. It’s not yet clear how
         this permit will be enforced.</p>
