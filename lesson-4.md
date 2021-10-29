@@ -107,6 +107,7 @@ Create an object representing a person. Then `console.log()` a simple sentence t
 <span>Don't forget, you might need to include spaces.</span>
 </details>
 
+You can use the following example to help you:
 ```js
 var animal = {
     species: "cat", 
