@@ -37,10 +37,6 @@ The command line can seem unfamiliar and scary, but it's really a different way 
 
 Once you've opened up your terminal you should see a window that has says "Last login" with a date after it, and a cursor next to a dollar sign.
 
-![](source/images/lesson-2/image-1.png)
-
-[comment]: <> (This image doesn't exist)
-
 Do not worry if the text in yours is a little different - it does not matter.
 
 Basic commands are written on a single line, and run when you press the `Enter` button on your keyboard.
@@ -158,6 +154,8 @@ As you write code, you'll want to be able to see what it does. For this, you nee
 You should now have your own coding playground to play with!
 
 <div style="border: 1px solid grey;">
+<img src="source/images/lesson-2/repl-create-account.png" alt="Repl website, create an account">
+<img src="source/images/lesson-2/repl-choose-node.png" alt="Repl website, create a new node file">
 <img src="source/images/lesson-2/repl-complete.png" alt="Repl website, showing an empty console">
 </div>
 
@@ -176,7 +174,7 @@ Write this in your Repl:
 console.log('Hello world!');
 ```
 
-Click "run" and check the console. You should see "Hello world!" printed out on the right hand side. It'll look something like this:
+Click "run" and check the console. You should see "Hello world!" printed out on the right-hand side. It'll look something like this:
 
 <div style="border: 1px solid grey;">
 <img src="source/images/lesson-2/js-hello-world.png" alt="Repl website, showing 'Hello World!' in the console">
