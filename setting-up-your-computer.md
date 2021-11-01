@@ -10,8 +10,8 @@ Programmers use **text editors** to write code. You could use Notepad (Windows) 
 
 We recommend you use [Atom](https://atom.io/) for this because it’s easy to use and you can install it from MoJ D & T Self Service.
 
-![Screenshot showing where to find Atom in Self Service](/source/images/set-up/image1.png)
+![Screenshot showing where to find Atom in Self Service](source/images/setting-up-your-computer/image1.png)
 
 Once it’s installed you can find it in your Applications folder:
 
-![Screenshot showing Atom in the Applications folder in Finder](/source/images/set-up/image2.png)
+![Screenshot showing Atom in the Applications' folder in Finder](source/images/setting-up-your-computer/image2.png)

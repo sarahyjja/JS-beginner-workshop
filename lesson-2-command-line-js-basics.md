@@ -18,6 +18,7 @@ In this tutorial we are going to look at:
 
 By the end of this tutorial you will have learnt how to navigate through the command line and how to run some basic operations in JavaScript.
 
+---
 ## Introduction to the command line
 
 ### What is the command line?
@@ -36,8 +37,6 @@ The command line can seem unfamiliar and scary, but it's really a different way 
 
 Once you've opened up your terminal you should see a window that has says "Last login" with a date after it, and a cursor next to a dollar sign.
 
-![](/images/lesson-2/image1.png)
-
 Do not worry if the text in yours is a little different - it does not matter.
 
 Basic commands are written on a single line, and run when you press the `Enter` button on your keyboard.
@@ -47,9 +46,7 @@ Try typing, then pressing `Enter`:
 ```shell
 pwd
 ```
-
-----------------
-
+---
 #### `pwd` or print working directory
 
 The `pwd` command prints to the command line the current directory (another name for folder) you are in. If you have just opened up your terminal, you are probably in your "home" directory, and should get an output similar to this:
@@ -60,8 +57,7 @@ The `pwd` command prints to the command line the current directory (another name
 
 So your current "working directory" is `/Users/your-username`.
 
-----------------
-
+---
 #### Getting things wrong on the command line
 
 If you type a command that the command line does not understand, it will show you an error message. Do not panic if you see one of these - everything is fine! Take a look at the command you wrote and see if you can work out what was wrong.
@@ -76,8 +72,7 @@ You should see an error message like `-bash: whargleblargle: command not found`.
 
 If you want to cancel your current entry, you can either delete the command using the backspace button, or press `Ctrl + C` to get a brand new line.  Your mouse will not work for navigating around the command line commands - but you can use the arrow keys on your keyboard to move the cursor left and right.
 
-----------------
-
+---
 #### `ls` or list
 
 You might wonder "how I do know which files are in a directory?", the `ls` command can do this:
@@ -89,9 +84,8 @@ ls
 This should print a list of the files and folders inside the working
 directory. You'll probably see directories like `Applications`, `Desktop`, `Documents` and `Downloads`.
 
-----------------
-
-### `cd` or change directory
+---
+#### `cd` or change directory
 
 The `cd` command allows you to move between directories. You tell `cd` which directory to move to by putting the path after the `cd`, like this:
 
@@ -101,7 +95,8 @@ cd Desktop
 
 Lots of commands need parameters like this - for example, `cd` needs to know the directory to move to, while `pwd` does not. We call the parameters "arguments".
 
-### Task 1: change to the directory containing your code
+---
+#### Task 1: Change to the directory containing your code
 
 In Lesson 1 we created a folder to keep our source code
 (`lesson-1-html-and-css`). Create a new folder for lesson 2 called
@@ -141,7 +136,7 @@ instead of
 ```bash
 $ cd /Users/your-username/My Directory With Spaces/lesson-2-javascript
 ```
-
+---
 ## Introduction to JavaScript
 JavaScript is a great language to learn. It is run on all modern web browsers and is used to change what is displayed on the web page in response to a user's activity.
 
@@ -159,6 +154,8 @@ As you write code, you'll want to be able to see what it does. For this, you nee
 You should now have your own coding playground to play with!
 
 <div style="border: 1px solid grey;">
+<img src="source/images/lesson-2/repl-create-account.png" alt="Repl website, create an account">
+<img src="source/images/lesson-2/repl-choose-node.png" alt="Repl website, create a new node file">
 <img src="source/images/lesson-2/repl-complete.png" alt="Repl website, showing an empty console">
 </div>
 
@@ -170,14 +167,14 @@ The "console" is where you can see the output of your code. In Repl, you should 
 
 We want to print "Hello world!" to the console. Thankfully in JavaScript there is a built-in way to do this, using a `console.log()`. You just need to put any text inside quotes, inside the parentheses, and when you run the code you should see that text printed to the console.
 
-Try it out
+### Try it out
 Write this in your Repl:
 
 ```
 console.log('Hello world!');
 ```
 
-Click "run" and check the console. You should see "Hello world!" printed out on the right hand side. It'll look something like this:
+Click "run" and check the console. You should see "Hello world!" printed out on the right-hand side. It'll look something like this:
 
 <div style="border: 1px solid grey;">
 <img src="source/images/lesson-2/js-hello-world.png" alt="Repl website, showing 'Hello World!' in the console">
@@ -185,6 +182,7 @@ Click "run" and check the console. You should see "Hello world!" printed out on 
 
 You also might be wondering why there's a semicolon at the end of the code you wrote. Semicolons are used at the end of every statement in JavaScript. The code usually won't break if you forget it, but it's good practice to remember.
 
+---
 ## Data Types
 If you played around with `console.log()` in the last step, you might have noticed that words always have to be inside quotes or else the code breaks, whereas numbers can work without quotes. Why is this? Well there are different data types in JavaScript. We're going to learn the three main data types right now (later we'll look at some other data types, like objects and arrays).
 
@@ -219,6 +217,7 @@ In JavaScript, the `+` operator adds numbers together. Other operators include:
 
 You can also use brackets (`()`) to group things, e.g. `(2 + 2) / 2` which would evaluate to 2, rather than `2 + 2 / 2` which would evaluate to 3.
 
+---
 #### Task 2: Maths challenge
 
 Use your Repl to work out the answer to "191 multiplied by 7".
@@ -233,6 +232,7 @@ console.log(191 * 7);
 
 </details>
 
+---
 ### Booleans
 A "boolean" value denotes if a statement is true or false. A boolean can only be `true` or `false` and is always written without quotes.
 
@@ -245,6 +245,7 @@ console.log(typeof "hello");
 ```
 You should see `string` printed to the console. This is because 'hello' is a string data type.
 
+---
 #### Task 3: Check the types
 Try to log the `typeof` three different values, `"hello"`, `102`, `false`. You should get a different output for each one.
 
@@ -261,12 +262,13 @@ console.log(typeof true);
 ```
 </details>
 
+---
 ## Variables
 
 Programming is all about creating abstractions, and in order to create an
 abstraction we must be able to assign names to things. Variables are a way of creating a name for a piece of data.
 
-Creating variables in JavaScript by using the keyword `var`, this lets the applicaiton know that you're about to store a value. You will also need to give a name to your variable.
+Creating variables in JavaScript by using the keyword `var`, this lets the application know that you're about to store a value. You will also need to give a name to your variable.
 
 ```JavaScript
 var name = "Ralph";
@@ -282,6 +284,7 @@ Variable names in JavaScript have to start with a letter, and they can not conta
 
 As a style convention, JavaScript variables use capitalises the first letter of the next word to separate the bits of the name - this is called `camelCase` (as opposed to `snake_case` or `PascalCase` which are used elsewhere).
 
+---
 #### Task 4: Set and use a variable
 
 Use your Repl to set a variable called `answer` to the value of `7` multiplied by `6`. Multiply the `answer` variable by `10` in Repl to see what happens.
@@ -302,6 +305,7 @@ console.log(answer);
 
 </details>
 
+---
 ## Functions
 
 While programming, we often find ourselves doing the same thing over and over again. It would be nice if we could give a particular task a name, and run it by calling its name.
@@ -343,6 +347,7 @@ sum(2, 3);
 ```
 Run this code and see what you get.
 
+---
 #### Task 5: Maths
 Write a function called `multiply` that multiplies two numbers together. This function should take in two parameters and return the answer.
 
@@ -357,6 +362,7 @@ multiply(2, 8);
 ```
 </details>
 
+---
 ### ES5 vs ES6
 One thing about programming languages is they are always evolving. JavaScript is no different, whenever new features are added to the language, there will be a new ES version of JavaScript.
 Up until now we have mostly been writing ES5. ES5 is good to know as it gives us a better understanding of the language, and you might come across books or code that use ES5 syntax.
@@ -396,7 +402,7 @@ Did your function return the correct answer?
 
 Notice how we didn't need to use the `return` statement here.
 The ability to write a function inline is one advantage of arrow functions.
-Note, if your function has more than one expression, it is good practice to use the `{}` and `return` keyword.
+Note, if your function has more than one expression, it is good practice using the `{}` and `return` keyword.
 
 Below is the same function written with `{}` and `return` keyword:
 
